@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estonian Tax-free Income Calculator 2018</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+
+    <header class="container">
+        <h1 class="text-heading">Tax-free Income Calculator</h1>
+    </header>
+
+    <div class="popUp">
+        <div class="text-error container inner">
+            Tax-free income is 0 because yearly income is exceeding 25 200 €.
+        </div>
+    </div>
+
+    <div class="container material-paper">
+        <h2 class="text-insert">Insert Gross Salary</h2>
+        <div class="form-control">
+            <input type="number" id="grossSalary" bind="grossSalary"/> <span class="euro">&euro;</span>
+        </div>
+        <div class="form-control">
+            <input type="radio" name="monthlyOrYearly" value="1" id="yrearly" checked="checked"> <span class="text-month">Monthly</span>
+            <input type="radio" name="monthlyOrYearly" value="12" id="monthly"> <span class="text-year">Yearly</span>
+        </div>
+
+        <h2 class="text-income">Tax-free income</h2> <div class="taxFreeIncome">-</div>
+
+    </div>
+
+    <div class="languages">
+        <div id="et" class="lang material-paper">ET</div>
+        <div id="en" class="lang material-paper">EN</div>
+    </div>
+
+    <footer class="container material-paper">
+        <span>Copyright © 2018 Gregor Laan</span>
+    </footer>
+
+    <script src="jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
